@@ -27,6 +27,8 @@
             rel="noopener noreferrer"
             class="p-2 rounded-lg hover:bg-accent/50 transition-colors duration-200 border border-border/50 hover:border-border flex items-center justify-center gap-2 px-3"
             aria-label="Resume"
+            data-s-event="Resume Download"
+            data-s-event-path="/about"
           >
             <FileText class="h-4 w-4 text-muted-foreground" />
             <span class="text-sm text-muted-foreground">Resume</span>
@@ -35,6 +37,8 @@
             href="mailto:jacobniv2187@gmail.com"
             class="p-2 rounded-lg hover:bg-accent/50 transition-colors duration-200 border border-border/50 hover:border-border flex items-center justify-center gap-2 px-3"
             aria-label="Email"
+            data-s-event="Email Click"
+            data-s-event-path="/about"
           >
             <Mail class="h-4 w-4 text-muted-foreground" />
             <span class="text-sm text-muted-foreground">Email</span>
@@ -45,6 +49,8 @@
             rel="noopener noreferrer"
             class="p-2 rounded-lg hover:bg-accent/50 transition-colors duration-200 border border-border/50 hover:border-border flex items-center justify-center gap-2 px-3"
             aria-label="LinkedIn"
+            data-s-event="LinkedIn Click"
+            data-s-event-path="/about"
           >
             <Linkedin class="h-4 w-4 text-muted-foreground" />
             <span class="text-sm text-muted-foreground">LinkedIn</span>

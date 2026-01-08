@@ -72,6 +72,8 @@
               ? 'text-foreground font-semibold' 
               : 'text-muted-foreground hover:text-foreground'}"
             onclick={(e) => handleClick(e, item.id)}
+            data-s-event="Navigation: {item.label}"
+            data-s-event-path="/#{item.id}"
           >
             {item.label}
             {#if activeSection === item.id}
@@ -114,6 +116,8 @@
                     ? 'text-foreground font-medium bg-accent/50' 
                     : 'text-muted-foreground hover:text-foreground hover:bg-accent/30'}"
                   onclick={(e) => handleClick(e, project.id)}
+                  data-s-event="Project: {project.label}"
+                  data-s-event-path="/#{project.id}"
                 >
                   {project.label}
                 </a>
@@ -130,6 +134,8 @@
               ? 'text-foreground font-semibold' 
               : 'text-muted-foreground hover:text-foreground'}"
             onclick={(e) => handleClick(e, item.id)}
+            data-s-event="Project: {item.label}"
+            data-s-event-path="/#{item.id}"
           >
             {item.label}
             {#if activeSection === item.id}
