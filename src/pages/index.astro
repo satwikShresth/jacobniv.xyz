@@ -1,0 +1,10 @@
+---
+import Portfolio from '../components/Portfolio.svelte';
+import Layout from '../layouts/Layout.astro';
+import { ModeWatcher } from "mode-watcher";
+---
+
+<Layout>
+	<ModeWatcher client:load />
+	<Portfolio client:load />
+</Layout>
