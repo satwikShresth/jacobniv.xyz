@@ -82,28 +82,29 @@ absolute-altitude/
 │   ├── pics/              # Project images
 │   └── jn_resume.pdf      # Resume PDF
 ├── src/
-│   ├── components/
-│   │   ├── About.svelte           # About section with contact info
-│   │   ├── Experience.svelte      # Work experience timeline
-│   │   ├── Header.svelte          # Desktop navigation header
-│   │   ├── MobileHeader.svelte    # Mobile navigation header
-│   │   ├── ModeToggle.svelte      # Dark/light mode toggle
-│   │   ├── Portfolio.svelte       # Main container component
-│   │   └── projects/              # Individual project components
-│   │       ├── CustomFidgets.svelte
-│   │       ├── ProstheticHand.svelte
-│   │       ├── MillenniumFalcon.svelte
-│   │       ├── Hammer.svelte
-│   │       └── CarpetSweeper.svelte
 │   ├── layouts/
 │   │   └── Layout.astro           # Base HTML layout
 │   ├── pages/
 │   │   └── index.astro            # Main page entry point
 │   ├── lib/
-│   │   ├── components/ui/         # Reusable UI components
-│   │   └── utils.ts               # Utility functions
+│   │   ├── components/
+│   │   │   ├── About.svelte           # About section with contact info
+│   │   │   ├── Experience.svelte      # Work experience timeline
+│   │   │   ├── Header.svelte          # Desktop navigation header
+│   │   │   ├── MobileHeader.svelte    # Mobile navigation header
+│   │   │   ├── ModeToggle.svelte      # Dark/light mode toggle
+│   │   │   ├── Portfolio.svelte       # Main container component
+│   │   │   ├── projects/              # Individual project components
+│   │   │   │   ├── CustomFidgets.svelte
+│   │   │   │   ├── ProstheticHand.svelte
+│   │   │   │   ├── MillenniumFalcon.svelte
+│   │   │   │   ├── Hammer.svelte
+│   │   │   │   └── CarpetSweeper.svelte
+│   │   │   └── ui/                    # Reusable UI components
+│   │   │       └── button/
+│   │   └── utils.svelte.ts            # Utility functions
 │   └── styles/
-│       └── global.css             # Global styles and CSS variables
+│       └── global.css                 # Global styles and CSS variables
 └── package.json
 ```
 
@@ -143,7 +144,7 @@ The site uses scroll-based navigation that automatically highlights the current 
 
 ### Adding a New Project
 
-1. Create a new component in `src/components/projects/`:
+1. Create a new component in `src/lib/components/projects/`:
 ```svelte
 <script lang="ts">
   let { id = 'new-project-id' }: { id?: string } = $props();
@@ -166,7 +167,7 @@ const projectItems = [
 
 ### Updating Contact Information
 
-Edit `src/components/About.svelte` to update:
+Edit `src/lib/components/About.svelte` to update:
 - Email address
 - LinkedIn URL
 - Resume PDF path
