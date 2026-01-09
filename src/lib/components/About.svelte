@@ -3,28 +3,38 @@
   import Linkedin from "@lucide/svelte/icons/linkedin";
   import FileText from "@lucide/svelte/icons/file-text";
   import { Button } from "$lib/components/ui/button";
-  
-  let { id = 'about' }: { id?: string } = $props();
-  
-  const summary = 'Biomedical engineer who combines a passion for tinkering, lab experience, and engineering principles to create intuitive, seamless designs for improving the quality of life in patients.';
+
+  let { id = "about" }: { id?: string } = $props();
+
+  const summary =
+    "Biomedical engineer who combines a passion for tinkering, lab experience, and engineering principles to create intuitive, seamless designs for improving the quality of life in patients.";
 </script>
 
-<section {id} data-project-section={id} class="scroll-mt-32 mb-20 pb-20 border-b border-border/20">
+<section
+  {id}
+  data-project-section={id}
+  class="scroll-mt-32 mb-20 pb-20 border-b border-border/20"
+>
   <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
     <div class="lg:col-span-4">
-      <div class="text-xs uppercase tracking-widest text-muted-foreground mb-2">About</div>
-      <h2 class="text-3xl lg:text-4xl font-semibold mb-6 text-foreground" style="font-family: 'Playfair Display', serif;">
+      <div class="text-xs uppercase tracking-widest text-muted-foreground mb-2">
+        About
+      </div>
+      <h2
+        class="text-3xl lg:text-4xl font-semibold mb-6 text-foreground"
+        style="font-family: 'Playfair Display', serif;"
+      >
         About Me
       </h2>
     </div>
-    
+
     <div class="lg:col-span-8 space-y-6">
       <div class="space-y-4 text-foreground leading-relaxed text-lg">
         <p class="text-lg">{summary}</p>
         <div class="flex items-center gap-4 flex-wrap">
-          <Button 
-            href="/jn_resume.pdf" 
-            target="_blank" 
+          <Button
+            href="/jn_resume.pdf"
+            target="_blank"
             rel="noopener noreferrer"
             variant="outline"
             aria-label="Resume"
@@ -34,7 +44,7 @@
             <FileText />
             Resume
           </Button>
-          <Button 
+          <Button
             href="mailto:jacobniv2187@gmail.com"
             variant="outline"
             aria-label="Email"
@@ -44,7 +54,7 @@
             <Mail />
             Email
           </Button>
-          <Button 
+          <Button
             href="https://www.linkedin.com/in/jacob-niv-56887033b/"
             target="_blank"
             rel="noopener noreferrer"
